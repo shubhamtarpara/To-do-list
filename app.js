@@ -73,16 +73,17 @@ function createToDo() {
     <input type="checkbox" name="checked" class="checkbox" id="checkbox-${uniqe_id}">
   
   <div class="todo-text-container">
-    <p class="todo-text" id="todo-text-${uniqe_id}">${input_value}</p>
+    <input class="todo-text" width="100%" height="48"value = "${input_value}" readonly="readonly" id="todo-text-${uniqe_id}"></input>
   </div>
   <div class="todo-buttons-container">
     <button class="edit" id="edit-${uniqe_id}">
-    <img src="edit.gif" alt="Computer man" style="width:15px;height:15px;">
+    <img src="edit.gif" alt="Computer man" >
     </button>
     <button class="delete-btn" id="btn-${uniqe_id}">
-    <img src="trashcan.gif" alt="Computer man" style="width:15px;height:15px;">
+    <img src="trashcan.gif" alt="Computer man" >
     </button>
-  </div></div>`
+  </div>
+  </div>`
   new_to_do.id = `todo-${uniqe_id}`;
   
   list.appendChild(new_to_do);
@@ -93,7 +94,6 @@ function createToDo() {
   const delete_button = document.getElementById("btn-" + uniqe_id);
   delete_button.addEventListener("click", clickAnimation);
   delete_button.addEventListener("click", deleteToDo);
-
   const edit_button = document.getElementById("edit-" + uniqe_id);
   edit_button.addEventListener("click", clickAnimation);
   edit_button.addEventListener("click", editToDo);
@@ -114,12 +114,15 @@ function editToDo() {
   const id = this.id;
   const unique_id = id.replace("edit-", "");
   let p = document.getElementById(`todo-text-${unique_id}`);
-  p.contentEditable = "true";
+  document.getElementById(`todo-text-${unique_id}`).readOnly = false;
+  
   p.style.backgroundColor = "white";
+  p.style.border = "1px solid black";
   p.style.outline = "none";
   p.addEventListener("blur", function () {
-    this.contentEditable = false;
+    document.getElementById(`todo-text-${unique_id}`).readOnly = true;
     p.style.backgroundColor = "lightcoral";
+    p.style.border = "none"
 
   
   });
@@ -146,6 +149,7 @@ function check() {
   let checkedtodo_edit = document.getElementById(`edit-${unique_id}`);
   if (this.checked) {
     p.style.textDecoration = "line-through";
+    p.style.textDecorationColor = "x";
     checkedtodo.classList.toggle("checked-li");
     checkedtodo_edit.setAttribute("disabled", "true");
   }
