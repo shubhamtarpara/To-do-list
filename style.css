@@ -6,52 +6,53 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
 ::placeholder {
   font-size: 18px;
 }
+
 body {
-  width: 100%;
-  height: 100vh;
-  padding: 10px;
   background: lightcoral;
+
+
+  margin: auto;
+
 }
 
-
 .container {
-  width: 100%;
-  margin: 69px auto;
+  width: 1000px;
+  height: 100vh;
+  margin: auto;
   padding: 25px;
+
+}
+
+hr {
+  margin: 42px auto 20px;
 }
 
 .title-container {
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .title-container h1 {
-  font-size: 50px;
+  font-size: 90px;
   color: blue;
   text-shadow: 1px 1px 2px rgb(255, 255, 255);
-  
+
 }
 
 .form-container {
-  margin-top: 30px;
-  height: 50px;
+  margin: 30px auto;
+
 }
 
-#todo-text-inputbox {
-  height: 50px;
-  width: 500px;
-  border: none;
-  outline: none;
-  padding-left: 20px;
-  margin-right: 10px;
-  border-radius: 5px;
-}
 
 .btn {
+
   border: none;
   border-radius: 5px;
   box-shadow: 2px 2px 2px blue;
@@ -59,13 +60,15 @@ body {
 
 .add-btn-container {
   display: inline-block;
-  width: 70px;
-  height: 50px;
+  width: 93px;
+  height: 52px;
 }
 
 .add-btn {
   height: 100%;
   width: 100%;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .clickstart {
@@ -73,70 +76,109 @@ body {
 }
 
 .features-buttons-container {
-  margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
 }
 
-hr {
-  width: 80vw;
-  margin: 20px auto 0px;
+
+.todo-container ul {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.checkbox {
+  height: 43px;
+  width: 43px;
+}
+
+
+#todo-text-inputbox {
+  height: 52px;
+  width: 700px;
+  border: none;
+  outline: none;
+  padding-left: 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+  font-size: 25px;
+}
+
+.todo-text-container {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 0px;
+}
+
+.todo-text-container p {
+  width: 100%;
+  font-weight: 600;
+  font-size: 30px;
+  margin: auto 25px;
+  padding-left: 10px;
+  border-radius: 10px;
+}
+.todo-text{
+  width: 100%;
+  margin: auto 20px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+.todo-buttons-container {
+  justify-content: center;
+  display: flex;
+
 }
 
 .delete-all-btn-container,
 .delete-checked-btn-container {
-  /* height: 50px;
-      width: 150px; */
+  display: inline-block;
+  width: 215px;
+  height: 52px;
   margin: 0px 10px;
 }
 
-.delete-all, .delete-checked{
-  height: 100%;
+.delete-all,
+.delete-checked {
   width: 100%;
+  height: 100%;
+  font-size: 25px;
+  font-weight: 600;
 }
 
-.todo-container ul{
-  display: flex;
-  flex-direction: column;
-
-  margin-top: 10px;
-}
-
-.todo-contaier li{
-  display: flex;
-  width: 583px;
-  background-color: white;
-  border-radius: 10px;
-  margin-bottom: 10px;
+li {
   list-style-type: none;
 }
 
-.checkbox-container{
-display: flex;
-align-items: center;
+.edit {
+  margin-right: 5px;
 }
 
-.checkbox{
-  
-  height: 20px;
-  width: 20px;
+.delete-btn {
+  margin-left: 5px;
+
 }
 
-.todo-text-container{
-  margin-right: auto;
-  display: flex;
-  align-items: center;
-  padding-left: 10px;
+.edit img {
+  width: px;
+  height: 36px;
 }
 
-.todo-text-container p{
-  padding: 10px;
-}
+.delete-btn img {
+  width: 36px;
+  height: 36px;
 
-li{
-  list-style-type: none;
 }
 
 /* .edit img{
@@ -160,5 +202,4 @@ li{
   border-radius: 0 3px 3px 0;
   cursor: pointer;
   transition: all 0.2s ease;
-
 } */
