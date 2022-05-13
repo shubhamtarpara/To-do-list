@@ -82,12 +82,24 @@ hr {
   height: 50px;
 }
 
-
+.todo-container{
+ 
+    margin: auto;
+}
 .todo-container ul {
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
+  
+  border: 3px soild black;
 }
+li {
+    list-style-type: none;
+    padding: 10px;
+    margin: 7px 0;
+    border-radius: 20px;
+    border: 3px solid rgb(121, 4, 4);
+  }
+  
 
 .checkbox-container {
   display: flex;
@@ -131,12 +143,16 @@ hr {
 .todo-text{
   width: 100%;
   margin: auto 20px;
+  padding-left: 10px;
+  font-weight: 500;
   height: 40px;
   border-radius: 10px;
+  font-size: 25px;
   border: 1px solid black;
 }
 .todo-buttons-container {
   justify-content: center;
+  align-items: center;
   display: flex;
 
 }
@@ -157,25 +173,25 @@ hr {
   font-weight: 600;
 }
 
-li {
-  list-style-type: none;
-}
 
 .edit {
   margin-right: 5px;
 }
 
 .delete-btn {
-  margin-left: 5px;
+  margin-left: 0 5px;
 
 }
 
 .edit img {
+    align-items: center;
   width: px;
   height: 36px;
 }
 
 .delete-btn img {
+    margin: 0;
+    padding: 0;
   width: 36px;
   height: 36px;
 
