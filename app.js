@@ -77,10 +77,10 @@ function createToDo() {
   </div>
   <div class="todo-buttons-container">
     <button class="edit" id="edit-${uniqe_id}">
-    <img src="edit.gif" alt="Computer man" >
+    <img src="edit.png" alt="Computer man" >
     </button>
     <button class="delete-btn" id="btn-${uniqe_id}">
-    <img src="trashcan.gif" alt="Computer man" >
+    <img src="delete.png" alt="Computer man" >
     </button>
   </div>
   </div>`
